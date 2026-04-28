@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Fernando</title>
+</head>
+
+<body>
+    <h1>Calculadora</h1>
+   <hr><! -- linha horizontal -->
+   <form action="">
+    Número1: <br/>
+    <input type="text" id="Número1"><br/>
+    Número2: <br/>
+    <input type="text" id="Número2"><br/>
+    <button onclick="calculadora()">calcular</button>
+    Resultado: <br/>
+    <input type="id="resposta" readonly="readonly"
+   </form>
+   <script>-
+    function calculadora(){
+        let n1 = document.getElementById("Número1").value;
+    let n2 = document.getElementById("Número2").value;
+
+    n1 = Number(n1);
+    n2 = Number(n2);
+
+    let resultado = n1 + n2;
+
+    alert("Resultado: " + resultado);
+    }
+   </script>
+</body>
+
+</html>

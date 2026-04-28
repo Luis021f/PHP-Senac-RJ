@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Média do Aluno</title>
+</head>
+<body>
+
+  <h2>Calcular Média do Aluno</h2> 
+
+  <label>Nota 1:</label>
+  <input type="number" id="nota1"><br><br>
+
+  <label>Nota 2:</label>
+  <input type="number" id="nota2"><br><br>
+
+  <button onclick="calcularMedia()">Calcular</button> <br/>
+  <input type="reset" valeu="limpar"/>
+
+  <h3 id="resultado"></h3>
+
+  <script>
+    function calcularMedia() {
+      var n1 = parseFloat(document.getElementById("nota1").value);
+      var n2 = parseFloat(document.getElementById("nota2").value);
+
+      var media = (n1 + n2) / 2;
+      var mensagem = "";
+
+      if (media === 10) {
+        mensagem = "Aprovado com Distinção";
+      } else if (media >= 7) {
+        mensagem = "Aprovado";
+      } else {
+        mensagem = "Reprovado";
+      }
+
+      document.getElementById("resultado").innerHTML = 
+        "Média: " + media.toFixed(2) + " - " + mensagem;
+    }
+  </script>
+
+</body>
+</html>
